@@ -1,0 +1,26 @@
+BCBS-CA Medical Policy: Advanced Imaging (MRI/CT) Prior Authorization
+
+Section 1: Scope
+This policy applies to outpatient MRI and CT imaging procedures billed
+under CPT codes 70000-76499 for members enrolled in BCBS-CA commercial
+and Medicare Advantage plans.
+
+Section 2: Clinical Criteria for MRI Brain (CPT 70551-70553)
+Prior authorization for MRI Brain will be approved when ONE of the
+following is met:
+  a) New focal neurological deficit with onset within 90 days, OR
+  b) Suspected stroke or TIA with non-diagnostic CT, OR
+  c) Chronic headache (ICD-10 G43.x, R51) with at least one red-flag
+     feature: onset after age 50, sudden "thunderclap" onset, or
+     abnormal neurological exam.
+Routine imaging for uncomplicated primary headache without red-flag
+features does not meet criteria and requires peer-to-peer review.
+
+Section 3: Documentation Requirements
+Requests must include: clinical notes from the ordering provider dated
+within 60 days, relevant prior imaging reports if available, and
+documentation of any conservative treatment attempted.
+
+Section 4: Turnaround
+Standard requests: 5 business days. Urgent requests with documented
+clinical urgency: 72 hours.

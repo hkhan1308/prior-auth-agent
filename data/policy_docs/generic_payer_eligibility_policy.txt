@@ -1,0 +1,14 @@
+Generic Payer Eligibility and Prior Authorization Overview
+
+Prior authorization is required for services designated as "PA Required"
+on the payer's procedure code list, currently covering select imaging,
+durable medical equipment over $1,000, and non-emergent inpatient
+admissions.
+
+Eligibility verification (270/271 transaction) must be completed prior
+to submitting a prior authorization request. Requests submitted without
+a valid, current eligibility check will be administratively denied and
+must be resubmitted.
+
+Appeals: a denied request may be appealed within 30 days of the denial
+notice, with new or additional clinical documentation.

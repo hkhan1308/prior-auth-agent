@@ -1,0 +1,9 @@
+{
+  "request_id": "PA-2026-00043",
+  "patient_id": "PT-88214",
+  "payer_id": "PAYER-BCBS-CA",
+  "procedure_code": "70551",
+  "diagnosis_code": "G43.909",
+  "supporting_documents": [],
+  "submitted_at": "2026-08-10T14:40:00Z"
+}

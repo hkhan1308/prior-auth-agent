@@ -1,0 +1,12 @@
+{
+  "request_id": "PA-2026-00042",
+  "patient_id": "PT-88213",
+  "provider_npi": "1234567893",
+  "payer_id": "PAYER-BCBS-CA",
+  "procedure_code": "70551",
+  "diagnosis_code": "G43.909",
+  "supporting_documents": [
+    {"doc_type": "clinical_notes", "url": "https://example-storage/docs/note-1.pdf"}
+  ],
+  "submitted_at": "2026-08-10T14:32:00Z"
+}

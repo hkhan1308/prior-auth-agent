@@ -1,0 +1,10 @@
+{
+  "request_id": "PA-2026-00044",
+  "patient_id": "PT-88215",
+  "provider_npi": "1234567893",
+  "payer_id": "PAYER-BCBS-CA",
+  "procedure_code": "ABC12",
+  "diagnosis_code": "G43.909",
+  "supporting_documents": [],
+  "submitted_at": "2026-08-10T14:45:00Z"
+}
