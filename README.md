@@ -46,18 +46,14 @@ Parse and validate a raw prior-auth request into a typed
 `PriorAuthRequest`. The Pydantic schema (`models.py`) is provided as
 given -- the work is in `parser.py`.
 
-Engineering bar: real, actionable validation errors ("missing required
-field: provider_npi"), not a bare "invalid input."
-
-### Phase 3 -- Agent loop (`src/agent/`) -- not scaffolded yet
-Build a bare-metal agent loop (no LangChain yet) that figures out what's
+### Phase 3 -- Agent loop (`src/agent/`)
+Build a bare-metal agent loop that figures out what's
 missing from a validated request and calls tools to fetch it.
 
 Engineering bar: the loop has to survive a tool that times out and a
 tool that returns malformed data, using the Phase 1 reliability layer.
-We'll scaffold this phase together once Phase 1-2 are done and reviewed.
 
-### Phase 4 -- RAG enrichment (`src/rag/`) -- not scaffolded yet
+### Phase 4 -- RAG enrichment (`src/rag/`)
 Retrieve relevant payer policy text to support the decision.
 
 Engineering bar: chunking tied to document structure (not fixed
@@ -65,7 +61,7 @@ character counts), hybrid search (keyword + vector, not vector-only),
 a reranking step, and a measured precision/recall check against
 `data/policy_docs/` -- not just "it returns something plausible."
 
-### Phase 5 -- Decision engine (`src/decision/`) -- not scaffolded yet
+### Phase 5 -- Decision engine (`src/decision/`) 
 Score confidence and emit a structured approve/deny/route-to-human
 decision.
 
@@ -74,11 +70,11 @@ validation error back to the model, don't just discard and fail), plus
 guardrail tests -- e.g. "confidence > 0.95 must never route to human
 review."
 
-### Phase 6 -- Orchestration (`src/orchestration/`) -- not scaffolded yet
+### Phase 6 -- Orchestration (`src/orchestration/`) 
 Make the workflow resumable: checkpoint state after each step so a
 crash or restart doesn't start the whole request over.
 
-### Phase 7 -- Observability (`src/observability/`) -- not scaffolded yet
+### Phase 7 -- Observability (`src/observability/`) 
 Structured, replayable tracing per step -- input, tool calls,
 intermediate reasoning, output -- so a bad decision can actually be
 debugged after the fact.
