@@ -20,7 +20,7 @@ class PriorAuthRequest(BaseModel):
     patient_id: str
     provider_npi: str = Field(..., min_length=10, max_length=10)
     payer_id: str
-    procedure_code: str  # CPT code, 5 digits
+    procedure_code: str = Field(..., pattern=r"^\d{5}$")  # CPT code, 5 digits
     diagnosis_code: str  # ICD-10 code
     supporting_documents: List[SupportingDocument] = []
     submitted_at: datetime

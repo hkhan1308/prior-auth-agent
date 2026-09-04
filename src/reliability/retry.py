@@ -48,8 +48,7 @@ JITTER_RATIO = 0.25
 #: Default ceiling on a single sleep, in seconds.
 DEFAULT_MAX_DELAY = 30.0
 
-# Dedicated RNG so jitter never perturbs the global `random` stream, which a
-# caller may have seeded for reproducibility elsewhere in the pipeline.
+# Dedicated RNG so jitter never perturbs the global `random` stream.
 _rng = random.Random()
 
 
@@ -107,8 +106,7 @@ def retry_with_backoff(
                         on_retry(exc, attempt, delay)
                     time.sleep(delay)
 
-            # Unreachable: the loop either returns or raises. Guards against a
-            # silent `None` if the bounds above are ever edited carelessly.
+            
             raise AssertionError("retry loop exited without returning or raising")
 
         # Expose config for tests, tracing, and introspection at call sites.

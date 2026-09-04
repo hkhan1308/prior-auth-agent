@@ -11,19 +11,22 @@ Contract:
     - A procedure_code that isn't 5 digits (CPT format) raises
       IngestionError with a specific, actionable message naming the field
       and what's wrong with it.
-
-This is the difference between a demo parser and a production one: the
-error has to tell someone downstream (a human reviewer, a retry system,
-a log) exactly what was wrong and where.
-
-Not implemented. See tests/test_ingestion.py.
 """
-from src.ingestion.models import PriorAuthRequest
 
+
+from src.ingestion.models import PriorAuthRequest
+from pydantic import ValidationError
 
 class IngestionError(Exception):
     pass
 
 
 def parse_request(raw: dict) -> PriorAuthRequest:
-    raise NotImplementedError("Implement parse_request")
+    try:
+        return PriorAuthRequest(**raw)
+    except ValidationError as exc:
+        messages = []
+        for error in exc.errors():
+            field = ".".join(str(part) for part in error["loc"]) or "<request>"
+            messages.append(f"{field}: {error['msg']}")
+        raise IngestionError("; ".join(messages)) from exc
